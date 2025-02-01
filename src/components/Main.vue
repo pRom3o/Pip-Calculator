@@ -41,14 +41,10 @@ const clear = () => {
       <button
         @click="showCalc"
         v-if="!Pip_calculator"
-        class="flex items-center text-3xl font-bold p-3"
+        class="flex items-center text-3xl font-bold p-3 space-x-3 hover:border-b border-b-gray-400 cursor-pointer"
       >
-        Pips Calculator<svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-        >
+        <span>Pips Calculator</span
+        ><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
           <path
             fill="none"
             stroke="currentColor"
@@ -60,10 +56,12 @@ const clear = () => {
         </svg>
       </button>
       <div
-        class="md:w-[400px] md:h-[400px] h-full w-full rounded-xl flex flex-col justify-between space-y-10 p-6"
+        class="md:w-[400px] md:h-[400px] h-full w-full rounded-xl flex flex-col justify-between space-y-10"
         v-show="Pip_calculator"
       >
-        <h1 class="w-full text-center font-medium text-2xl p-2">{{ Header }}</h1>
+        <h1 class="w-full text-center font-medium md:text-4xl text-2xl p-8">
+          {{ Header }}
+        </h1>
         <p
           class="font-medium text-2xl h-10 text-center p-1"
           :class="{ 'inline-block': showPips, hidden: !showPips }"
@@ -78,7 +76,7 @@ const clear = () => {
               name="entryPrice"
               v-model="entryPrice"
               placeholder="Entry Price"
-              class="p-3 outline outline-blue-300"
+              class="p-3 outline outline-blue-300 rounded-xl"
             />
           </div>
           <div class="space-y-2 flex flex-col">
@@ -88,18 +86,18 @@ const clear = () => {
               name="exitPrice"
               v-model="exitPrice"
               placeholder="Exit Price"
-              class="p-3 outline outline-blue-300"
+              class="p-3 outline outline-blue-300 rounded-xl"
             />
           </div>
           <button
             @click="calc_pip(entryPrice, exitPrice)"
-            class="p-2 bg-blue-400 w-full rounded-xl"
+            class="p-2 bg-blue-400 w-full rounded-xl cursor-pointer hover:bg-blue-300"
           >
             Calculate pips
           </button>
           <button
             @click="clear"
-            class="w-full flex items-center justify-center p-2 space-x-1 bg-red-300 rounded-xl"
+            class="w-full flex items-center justify-center p-2 space-x-1 bg-red-300 rounded-xl cursor-pointer hover:bg-red-200"
           >
             <span>Clear</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24">
@@ -117,9 +115,9 @@ const clear = () => {
 
         <button
           @click="showCalc"
-          class="w-full flex items-center justify-center p-2 space-x-5 bg-gray-100 rounded-xl"
+          class="w-full flex items-center justify-center p-3 space-x-5 bg-gray-100 rounded-xl hover:bg-gray-200 cursor-pointer"
         >
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24">
             <path
               fill="none"
               stroke="#b80707"

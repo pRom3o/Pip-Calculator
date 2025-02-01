@@ -1,0 +1,5 @@
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <rect width="64" height="64" fill="white"/>
+  <text x="15" y="40" font-size="30" font-weight="bold" fill="black">€</text>
+  <text x="30" y="45" font-size="28" font-weight="bold" fill="green">$</text>
+</svg>

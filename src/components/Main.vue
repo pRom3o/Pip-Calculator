@@ -102,7 +102,7 @@ const clear = () => {
             class="w-full flex items-center justify-center p-2 space-x-1 bg-red-300 rounded-xl"
           >
             <span>Clear</span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24">
               <path
                 fill="none"
                 stroke="#b80707"

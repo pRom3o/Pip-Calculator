@@ -34,6 +34,10 @@ const show = () => {
 
 // function to calculate pips
 const calc_pip = () => {
+  if (!entryPrice.value || !exitPrice.value) {
+    alert('Please fill in all fields');
+    return;
+  }
   pips.value = (Number(entryPrice.value) - Number(exitPrice.value)) * 10000;
   show();
 };
